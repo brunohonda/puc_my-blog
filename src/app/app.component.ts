@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+import { BioComponent } from './bio/bio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
@@ -8,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   standalone: true,
   imports: [
     CommonModule,
+    BioComponent,
     NavbarComponent,
   ],
   templateUrl: './app.component.html',
