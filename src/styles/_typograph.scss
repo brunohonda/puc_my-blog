@@ -1,0 +1,29 @@
+$heading-sizes: (
+  'h1': 32,
+  'h2': 28,
+  'h3': 24,
+  'h4': 20,
+  'h5': 16,
+  'h6': 12,
+);
+
+@mixin heading($font-size) {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: #{$font-size}px;
+  letter-spacing: 0;
+  line-height: 120%;
+}
+
+@each $heading, $size in $heading-sizes {
+  %heading-#{$size} {
+    @include heading($size);
+  }
+
+  #{$heading} {
+    @extend %heading-#{$size};
+  }
+
+  .heading-#{$size} {
+    @extend %heading-#{$size};
+  }
+}
