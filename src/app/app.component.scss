@@ -16,7 +16,9 @@
     overflow-y: auto;
 
     &__wrapper {
-      width: 200px;
+      display: grid;
+      row-gap: 24px;
+      width: 300px;
       margin: 0 auto;
       padding: 32px 0;
     }

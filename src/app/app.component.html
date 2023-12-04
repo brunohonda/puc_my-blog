@@ -5,6 +5,8 @@
   </header>
   <div class="app-content">
     <div class="app-content__wrapper">
+      <h3>Últimas do blog</h3>
+      <app-post  *ngFor="let post of posts.slice(0, 3)" [post]="post"></app-post>
     </div>
   </div>
 </div>
