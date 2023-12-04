@@ -6,7 +6,8 @@
   <div class="app-content">
     <div class="app-content__wrapper">
       <h3>Últimas do blog</h3>
-      <app-post  *ngFor="let post of posts.slice(0, 3)" [post]="post"></app-post>
+      <app-post  *ngFor="let post of posts.slice(0, limit)" [post]="post"></app-post>
+      <a class="app-content__action" (click)="showAll()" *ngIf="limit < posts.length">Ver tudo</a>
     </div>
   </div>
 </div>

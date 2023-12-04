@@ -18,10 +18,15 @@ import { PostComponent } from './post/post.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  limit = 3;
   posts = [
     { title: '5 dicas para a sua carreira profissional', text: 'Confira algumas dicas que podem ajudar a alavancar sua carreira como desenvolvedor front-end' },
     { title: '5 dicas para a sua carreira profissional', text: 'Confira algumas dicas que podem ajudar a alavancar sua carreira como desenvolvedor front-end' },
     { title: '5 dicas para a sua carreira profissional', text: 'Confira algumas dicas que podem ajudar a alavancar sua carreira como desenvolvedor front-end' },
     { title: '5 dicas para a sua carreira profissional', text: 'Confira algumas dicas que podem ajudar a alavancar sua carreira como desenvolvedor front-end' },
   ];
+
+  showAll() {
+    this.limit = this.posts.length;
+  }
 }
